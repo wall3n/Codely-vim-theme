@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codely Theme Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="dark-mode" data-theme="codely">
+    <!-- navigation -->
+    <nav id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- hero section -->
+    <main>
+      <section class="hero" style="background-color: #202124;">
+        <h1>Hello, <span class="highlight">world</span>!</h1>
+        <p>Testing <strong>bold</strong>, <em>italic</em>, and <code>inline code</code>.</p>
+        <img src="logo.png" alt="Codely logo" width="200" height="100" />
+        <a href="https://codely.com" target="_blank" rel="noopener">Visit Codely</a>
+      </section>
+
+      <!-- form with various input types -->
+      <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label for="username">Username:</label>
+        <input
+          id="username"
+          type="text"
+          name="username"
+          placeholder="Enter name"
+          required
+          minlength="3"
+          maxlength="32"
+        />
+
+        <label for="role">Role:</label>
+        <select id="role" name="role" multiple>
+          <option value="admin" selected>Admin</option>
+          <option value="viewer">Viewer</option>
+        </select>
+
+        <button type="submit" disabled>Send</button>
+      </form>
+
+      <!-- table -->
+      <table border="0" cellpadding="8">
+        <thead>
+          <tr>
+            <th scope="col">Token</th>
+            <th scope="col">Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>keyword</td>
+            <td style="color: #fb5245;">#fb5245</td>
+          </tr>
+          <tr>
+            <td>string</td>
+            <td style="color: #b8bb26;">#B8BB26</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!-- inline script to test JS inside HTML -->
+    <script type="module">
+      const greeting = "hello";
+      document.title = `${greeting} from Codely`;
+    </script>
+
+    <!-- inline style to test CSS inside HTML -->
+    <style>
+      body { background: #202124; color: #EBDBB2; }
+      .highlight { color: #fb5245; font-weight: bold; }
+    </style>
+  </body>
+</html>
